@@ -26,6 +26,9 @@ public class WelcomeController {
     @Value( "${nombre}" )
     private String nombre;
     
+    @Value( "${jdbc.user}" )
+    private String user;
+    
     @Autowired
     private DataSource datasource;
 
@@ -42,6 +45,7 @@ public class WelcomeController {
 			model.addAttribute("testdbdetail", e.getMessage());
 		}
 
+        model.addAttribute("user", user);
         return "index";
 
     }
