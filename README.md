@@ -12,5 +12,17 @@ $ git clone https://github.com/arodriguezamis/examen.git
 $ cd examen
 $ mvn clean install
 ```
+NOTA IMPORTANTE: En caso de se desee instalar en tomcat. Antes de compilar se necesita modificar el archivo pom.xml y sustituir esta sección:
+
+<!-- Some containers like Tomcat don't have jstl library -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+			<scope>provided</scope> <--- ELIMINAR ESTA LINEA EN CASO DE INTENTAR INSTALAR EN TOMCAT
+		</dependency>
+
+
+
 El war final se genera en la ruta 'target/finalName'
 
