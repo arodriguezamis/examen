@@ -9,6 +9,7 @@ Project Link - https://github.com/arodriguezamis/examen.git
 ### 1.1 Crear un WAR con maven :
 ```
 $ git clone https://github.com/arodriguezamis/examen.git
+$ cd examen
 $ mvn clean install
 ```
 El war final se genera en la ruta 'target/finalName'
